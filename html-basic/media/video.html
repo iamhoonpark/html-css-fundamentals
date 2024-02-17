@@ -1,0 +1,19 @@
+<!-- 
+    단일재생
+     - controls: 재생바 제공
+     - autoplay: 페이지 진입시 자동재생
+     - autoplay loop: 자동재생 + 반복재생
+-->
+<video src="./assets/videos/kimbug.mov" controls></video>
+
+<!-- 
+    단일재생이지만, 브라우저별 지원되지 않는 확장자일 경우
+    옵션 중 지원되는 확장자만 제공해주며 모든 옵션이 지원되지 않을 경우
+    가장 하단에 위치한 p태그를 노출
+ -->
+<video controls>
+    <source src="./assets/videos/kimbug.mov" type="video/mp4"/>
+    <source src="./assets/videos/kimbug.mp4" type="video/mp4"/>
+    <p>당신의 브라우저는 오디오 파일을 제공하지 않습니다.</p>
+    <a href="https://browsehappy.com/?locale=ko">브라우저 업데이트</a>
+</video>
