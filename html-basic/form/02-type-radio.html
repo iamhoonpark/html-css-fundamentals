@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Input(radio)</title>
+</head>
+<body>
+
+    <!-- 
+        radio
+         1) name: input의 그룹화, 파라미터의 key
+         2) value: 파라미터의 vlaue
+    -->
+
+    <form action="#" method="GET">
+        <input type="radio" name="subscription" value="true" id="subscribed">
+        <label for="subscribed">구독중</label>
+
+        <input type="radio" name="subscription" value="false" id="unsubscribed">
+        <label for="unsubscribed">미구독</label>
+
+        <button type="submit">
+            Submit
+        </button>
+    </form>
+    
+</body>
+</html>
