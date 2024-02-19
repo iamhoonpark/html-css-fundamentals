@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Inbox</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <table class="inbox">
+        <thead class="sr-only"><!-- sr-only: screen reader only -->
+            <tr>
+                <th scope="col">
+                    Actions
+                </th>
+                <th scope="col">
+                    Sender
+                </th>
+                <th scope="col">
+                    Title
+                </th>
+                <th scope="col">
+                    Timestamp
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="unread">
+                <td>
+                    <div class="inbox-actions">                        
+                        <div class="inbox-checkbox">
+                            <label for="inbox-1" class="sr-only">Select this email</label>
+                            <input type="checkbox" name="emailId" id="inbox-1"/>
+                        </div>
+                        <button type="button" class="inbox-star">
+                            <span class="sr-only">Add to favorites</span>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    JOBKOREA
+                </td>
+                <td>
+                    <a href="#">
+                        <strong class="sr-only">
+                            Unread:
+                        </strong>
+                        <strong>
+                            [JOBKOREA] The announcement of the results has arrived from KEPCO.
+                        </strong>
+                        <span>
+                            - JOBKOREA KEPCO is announcing the results...    
+                        </span>                        
+                    </a>
+                </td>
+                <td>
+                    5:33 PM
+                </td>
+            </tr>
+            <tr class="read">
+                <td>
+                    <div class="inbox-actions">                        
+                        <div class="inbox-checkbox">
+                            <label for="inbox-1" class="sr-only">Select this email</label>
+                            <input type="checkbox" name="emailId" id="inbox-1"/>
+                        </div>
+                        <button type="button" class="inbox-star">
+                            <span class="sr-only">Add to favorites</span>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    Jake Park
+                </td>
+                <td>
+                    <a href="#">
+                        <strong class="sr-only">
+                            Read:
+                        </strong>
+                        <span>
+                            [iamhoonpark/iamhoonpark.github.io] Run cancelled: pages build and deployment
+                        </span>
+                        <span>
+                            - pages build and deployment workflow run...    
+                        </span>                        
+                    </a>
+                </td>
+                <td>
+                    9:00 AM
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="./app.js"></script>
+</body>
+</html>

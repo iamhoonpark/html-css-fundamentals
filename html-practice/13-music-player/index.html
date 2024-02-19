@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genie Best</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <ol class="music-player">
+        <li class="music-play-item">
+            <img 
+                src="./assets/IU.jpg" 
+                alt="Love wins all" 
+                lang="ko" 
+                class="music-album-cover"
+            />
+            <div class="music-info">                
+                <div class="music-info-detail">                
+                    <h1>
+                        Love wins all
+                    </h1>
+                    <strong>아이유 (IU)</strong>
+                </div>
+                <span>
+                    <span class="sr-only">Duration</span>
+                    04:33
+                </span>
+            </div>
+            <audio src="./assets/music-1.mp3" class="music-audio"></audio>
+            <!-- CSS에서 제어할 것이기 때문에 속성 controls 제외 -->
+        </li>
+        <li class="music-play-item">
+            <img 
+                src="./assets/TWS.jpg" 
+                alt="첫 만남은 계획대로 되지 않아" 
+                lang="ko"
+                class="music-album-cover"
+            />            
+            <div class="music-info">
+                <div class="music-info-detail">
+                    <h1>
+                        <span lang="ko">첫 만남은 계획대로 되지 않아</span>
+                        Plot twist
+                    </h1>
+                    <strong>TWS (투어스)</strong>
+                </div>
+                <span>
+                    <span class="sr-only">Duration</span>
+                    03:33
+                </span>
+            </div>
+            <audio src="./assets/music-2.mp3"></audio>
+        </li>
+    </ol>
+
+    <script src="./app.js"></script>
+</body>
+</html>
