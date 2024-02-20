@@ -1,0 +1,19 @@
+:root {
+    --color-red: #ff4949;
+    --color-yellow: #ffc82c;
+    --color-blue: #0066ff;
+}
+
+.active {
+    font-weight: 700;
+}
+
+/* active 클래스 다음에 따라오는 모든 형제 li요소들을 선택 */
+.active~li {
+    color: var(--color-blue);
+}
+
+/* active 클래스 다음에 위치한 형제 li요소 한 개만 선택 */
+.active+li {
+    color: var(--color-red);
+}

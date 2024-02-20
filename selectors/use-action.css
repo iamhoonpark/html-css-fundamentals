@@ -1,0 +1,36 @@
+/* 
+    PURPLE 1 #a389f4
+    PURPLE 2 #7e5bef
+    PURPLE 3 #592dea
+    BLUE 1 #85d7ff
+    BLUE 2 #1fb6ff
+    BLUE 3 #009eeb
+*/
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+a:hover {
+    background-color: #7e5bef;
+}
+
+a:active {
+    color: #fff;
+}
+
+input {
+    outline: none;
+    box-shadow: none;
+}
+
+input:focus {
+    border-color: #1fb6ff;
+}
+
+input:active {
+    border-color: #592dea;
+}

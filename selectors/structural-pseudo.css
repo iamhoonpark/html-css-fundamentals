@@ -1,0 +1,8 @@
+/* 가상클래스선택자 */
+li:nth-child(2n) {
+    color: #4955ff;
+}
+
+li:nth-child(2n-1) {
+    color: #7dff49;
+}
