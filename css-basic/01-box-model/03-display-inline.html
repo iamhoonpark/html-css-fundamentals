@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline</title>
+    <link rel="stylesheet" href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Spoqa Han Sans', sans-serif;
+            color: #212526;
+        }
+
+        span {
+            color: #fff;
+            background-color: #0066ff;
+
+
+            
+            /*          Inline 성질
+                width, height, -top, -bottom 불가
+                height는 실제 적용해보면 박스 사이즈는 먹히지만
+                해당 사이즈 만큼 다른 컨텐츠들을 가려버림
+            */
+            width: 700px;
+            padding-top: 60px;
+            
+            padding-left: 10px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur harum dolor, 
+        quaerat nostrum explicabo quia ad exercitationem alias perspiciatis suscipit quasi expedita reprehenderit dolorem, quas sint. 
+        Distinctio molestiae officiis temporibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+        Cras lectus eros, vestibulum id tincidunt ut, condimentum maximus odio. Vestibulum facilisis est lorem, eu malesuada dui rhoncus non. 
+        Nunc vestibulum dolor nulla, pulvinar hendrerit enim facilisis id. Morbi at ex nec eros porta ornare. Etiam mattis turpis id finibus consequat. 
+        <span>Maecenas a arcu arcu.</span> Sed id elit tortor. Nulla id dolor vitae arcu porta cursus sed vel nunc. Mauris pellentesque auctor suscipit. Phasellus sed lectus tellus. 
+        Curabitur lobortis sem et consectetur feugiat. Phasellus quis nisl eget mi feugiat placerat. Sed semper egestas lacus sit amet pulvinar.
+    </p>
+</body>
+</html>

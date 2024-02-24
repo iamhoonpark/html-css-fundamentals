@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block</title>
+    <link rel="stylesheet" href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Spoqa Han Sans', sans-serif;
+        }
+
+        .parent {
+            background-color: #e5e9f2;
+        }
+
+        .child,
+        .other,
+        .test {
+            height: 50px;
+            color: #212259;
+            line-height: 50px;
+            text-indent: 20px;
+        }
+
+        .child {
+            width: 500px;
+            background-color: #ffc82c;
+        }
+
+        .other {
+            width: 100px;
+            background-color: #ff4949;
+        }
+
+        .test {
+            width: 200px;
+            background-color: #D873F1;
+
+
+            
+            /*          block의 성질
+                남은 공간을 margin으로 채우는 성질을 그냥 왼쪽으로 생성되게 한것
+                margin: 0 auto; 성질이 컨텐츠를 중앙으로 오게하는 이유는
+                -left: auto와 -right: auto 을 합친 것이기 때문
+            */
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">Child</div>
+        <div class="other">Other</div>
+        <div class="test">
+            Test
+        </div>
+    </div>
+</body>
+</html>
