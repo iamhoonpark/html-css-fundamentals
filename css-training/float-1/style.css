@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8492a6;
+  text-decoration: none;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tab-menu {
+  /* 최대길이 540px */
+  max-width: 540px;
+  border-bottom: 1px solid #E5EAEF;
+}
+
+.tab-menu::after {
+  content: '';
+  display: block;
+  clear: left;
+}
+
+.tab-menu-item {
+  float: left;
+  margin-right: 16px;
+}
+
+/* a태그에 padding을 주어 사용성을 높임 */
+.tab-menu-item a {
+  display: block;
+  padding: 16px 20px;
+}
+
+/* tab-menu-item이면서 동시에 selected태그 일 경우 */
+.tab-menu-item.selected {
+  border-bottom: 2px solid #2860E1;
+}
+
+/* tab-menu-item이면서 동시에 selected태그 일 경우 안에 있는 a태그에 */
+.tab-menu-item.selected a {
+  color: #2860E1;
+  font-weight: 500;
+}

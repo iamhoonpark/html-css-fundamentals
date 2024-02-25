@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display 변화</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel=""stylesheet />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #212529;
+        }
+
+        .parent {
+            width: 200px;
+            margin: 0 auto;
+            background-color: #eff2f7;
+        }
+
+        .child {
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .red {
+            /* 확인법: 개발자도구 > 계산됨(cumputed) > filter show all(모두선택) 체크 > 검색 display */
+            float: left;
+            width: 100px;
+            height: 200px;
+            background-color: #ff4949;
+        }
+        
+        .yellow {
+            background-color: #ffc82c;
+        }
+        
+        .blue {
+            background-color: #0066ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <span class="child red">Child</span>
+        <span class="child yellow">Child</span>
+        <span class="child blue">Child</span>
+    </div>
+</body>
+</html>

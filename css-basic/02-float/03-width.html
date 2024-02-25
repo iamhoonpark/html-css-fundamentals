@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width와 margin의 변화</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel=""stylesheet />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #212529;
+        }
+
+        .parent {
+            width: 200px;
+            margin: 0 auto;
+            background-color: #eff2f7;
+        }
+
+        .child {
+            /* 1. 별도의 width 값을 설정하지 않았지만 block의 성질로 인해 부모의 width값을 물려받음 */
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .red {
+            /* 2. 그러나 특정 요소에 float를 설정할 경우
+            자신이 가지고 있는 컨텐츠(Child) 크기만큼만 width를 가지고 공중으로 뜨게됨 */
+            /* 3. 남은 여백을 margin으로 채우던 block 성질이 사라짐 */
+            float: left;
+            background-color: #ff4949;
+        }
+        
+        .yellow {
+            background-color: #ffc82c;
+        }
+        
+        .blue {
+            background-color: #0066ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child red">JAKE 연봉 1억 각</div>
+        <div class="child yellow">Child</div>
+        <div class="child blue">Child</div>
+    </div>
+</body>
+</html>

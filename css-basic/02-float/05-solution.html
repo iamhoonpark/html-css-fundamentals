@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearfix</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel=""stylesheet />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #212529;
+        }
+
+        .parent {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #eff2f7;
+        }
+
+        .parent::after {
+            content: "";
+            /* clear같은 경우 block 요소에만 사용가능 */
+            display: block;
+            /* child들이 float: left 이므로 clear left를 선언 */
+            clear: left
+        }
+
+        .child {
+            float: left;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+            opacity: 0.3;
+        }
+
+        .red {
+            background-color: #ff4949;
+        }
+        
+        .yellow {
+            background-color: #ffc82c;
+            margin-bottom: 40px;
+        }
+        
+        .blue {
+            background-color: #0066ff;
+            margin-right: 300px;
+        }
+
+        .other {
+            color: #fff;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child red">Child</div>
+        <div class="child yellow">Child</div>
+        <div class="child blue">Child</div>
+    </div>
+    <div class="other">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias magnam laudantium cupiditate voluptates, voluptate hic dolore voluptatem consequuntur officiis, quae sequi, tempora perferendis suscipit dolorem provident ullam minima quos eveniet.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias magnam laudantium cupiditate voluptates, voluptate hic dolore voluptatem consequuntur officiis, quae sequi, tempora perferendis suscipit dolorem provident ullam minima quos eveniet.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias magnam laudantium cupiditate voluptates, voluptate hic dolore voluptatem consequuntur officiis, quae sequi, tempora perferendis suscipit dolorem provident ullam minima quos eveniet.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias magnam laudantium cupiditate voluptates, voluptate hic dolore voluptatem consequuntur officiis, quae sequi, tempora perferendis suscipit dolorem provident ullam minima quos eveniet.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias magnam laudantium cupiditate voluptates, voluptate hic dolore voluptatem consequuntur officiis, quae sequi, tempora perferendis suscipit dolorem provident ullam minima quos eveniet.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias magnam laudantium cupiditate voluptates, voluptate hic dolore voluptatem consequuntur officiis, quae sequi, tempora perferendis suscipit dolorem provident ullam minima quos eveniet.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias magnam laudantium cupiditate voluptates, voluptate hic dolore voluptatem consequuntur officiis, quae sequi, tempora perferendis suscipit dolorem provident ullam minima quos eveniet.<br/>
+        other클래스 div는 형제를 인식하지 못하고 올라갔지만, 안에 있는 컨텐츠들은 float를 인식하여 옆으로 빠져나옴<br/>
+        즉, block요소는 flaot를 인식하지 못함<br/>
+        그러나, inline요소는 float를 인식
+    </div>
+</body>
+</html>
