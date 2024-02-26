@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position - Absolute</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel=""stylesheet />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #212529;
+        }
+
+        .grandparent {
+            position: relative;
+            width: 800px;
+            margin: 0 auto;
+            background-color: #1f2d3d;
+        }
+
+        .parent {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #d3d3d3;
+        }
+
+        .child {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .red {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-color: #ff4949;
+        }
+        
+        .yellow {
+            background-color: #ffc82c;
+        }
+        
+        .blue {
+            background-color: #0066ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child red">Child</div>
+            <div class="child yellow">Child</div>
+            <div class="child blue">Child</div>
+        </div>
+    </div>
+</body>
+</html>

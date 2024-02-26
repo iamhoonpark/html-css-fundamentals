@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #1f2d3d;
+  line-height: 1.4545454545;
+}
+
+span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7d858f;
+  line-height: 1.5;
+}
+
+strong {
+  font-size: 22px;
+  color: #2860e1;
+  line-height: 1.0909090909;
+}
+
+strong span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #525d69;
+  line-height: 1.5;
+}
+
+button {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+#prev {
+  background-image: url(./assets/icon-backward.svg);
+}
+
+#next {
+  background-image: url(./assets/icon-forward.svg);
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+.card {
+  width: 400px;
+}
+
+.card-carousel {
+  position: relative;
+}
+
+.card-carousel img {
+  /* 이미지 사이즈 조정할때 많이 사용하는 조합
+     - display: block; 예외속성을 명시적으로 맞춤
+     - width: 100%; 부모의 width크기
+     - height: auto; 가지고 있던 비율에 맞춰서 자동으로 조정 */
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#prev,
+#next {
+  position: absolute;
+  /* relative된 요소 기준으로 50% */
+  top: 50%;
+  /* 자기자신(button요소) Y축의 반 만큼 올라감 */
+  transform: translateY(-50%);
+}
+
+#prev {
+  left: 0;
+}
+
+#next {
+  right: 0;
+}
+
+.card-content {
+  padding: 12px 16px;
+}
+
+.card-content h1 {
+  margin-bottom: 2px;
+}
+
+.card-content strong {
+  display: block;
+  margin-top: 8px;
+  text-align: right;
+}
