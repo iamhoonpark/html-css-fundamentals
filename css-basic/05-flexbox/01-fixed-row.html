@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Row</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel=""stylesheet />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #212529;
+        }
+
+        .parent {
+            /* flex 선언 > 가로정렬 > 가운데정렬 > 한줄에 요소 정렬 */
+            display: flex;
+            flex-direction: row;
+            /* flex-start | center | flex-end | space-between(여백을 동일하게 등분) | space-around(요소 기준 여백 좌우측 동일 비율) */
+            justify-content: center;
+            flex-wrap: nowrap;
+            width: 1000px;
+            margin: 0 auto;
+            background-color: #d3d3d3;
+        }
+
+        .child {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .red {
+            background-color: #ff4949;
+        }
+        
+        .yellow {
+            background-color: #ffc82c;
+        }
+        
+        .blue {
+            background-color: #0066ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child red">Child</div>
+        <div class="child yellow">Child</div>
+        <div class="child blue">Child</div>
+    </div>
+</body>
+</html>
