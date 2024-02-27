@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.landing {
+  background-image: url("./assets/img-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.landing-title {
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.landing-title strong {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.landing-link {
+  line-height: 1;
+  color: #fff;
+}
+
+.banner-title a {
+  color: #1f2d3d;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+.banner {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFC82C;
+}
+
+.banner-title a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  width: 100%;
+  height: 64px;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.landing-title {
+  margin-bottom: 24px;
+  text-align: right;
+}
+
+.landing-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 52px;
+  border: 2px solid #fff;
+  border-radius: 16px;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 바뀌는 부분만 가져와서 코딩 */
+@media screen and (min-width: 768px) {
+  .banner {
+    top: 0;
+    /* mobile버전에서 bottom이 선언되어 있으나 desktop에선 top으로 위치 이동시켜야 함
+    따라서 bottom을 효력 중지시킬 수 있도록 bottom: auto;
+    왜냐햐면 left,right 중 하나만 top, bottom 중 하나만 사용할 수 있음 */
+    bottom: auto;
+  }
+
+  .banner-title a {
+    height: 80px;
+  }
+
+  .landing {
+    align-items: center;
+  }
+
+  .landing-title {
+    margin-bottom: 32px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .banner-link {
+    width: 180px;
+    height: 56px;
+    font-size: 18px;
+  }
+}
