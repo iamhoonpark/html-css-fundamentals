@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Spacing</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html {
+            font-size: 20px;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #212529;
+        }
+
+        .parent {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            /* p태그의 적용된 폰트(20px)에 1% 만 적용 */
+            letter-spacing: -0.01em;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia asperiores magni odit similique voluptate dignissimos quos quia iste nihil, eligendi doloribus eos officiis voluptatum corporis consectetur, illo fugiat, nemo aperiam!
+        </p>
+    </div>
+</body>
+</html>
