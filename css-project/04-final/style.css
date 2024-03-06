@@ -45,6 +45,68 @@ p {
     letter-spacing: -0.01em;
 }
 
+/* button */
+.fill-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 48px;
+    border-radius: 2px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #fff;
+    background-color: #3040C4;
+    transition: opacity 300ms ease-in-out;
+}
+
+.fill-button.inverted {
+    color: #3040C4;
+    background-color: #fff;
+}
+
+.fill-button:hover {
+    opacity: 0.8;
+}
+
+/* Landing */
+.landing {
+    background-color: #FDDED8;
+    text-align: center;
+}
+
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.landing-title {
+    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    color: #2B292D;
+}
+
+.landing-desc {
+    margin-bottom: 20px;
+}
+
+.landing .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing .button-group .fill-button:first-child {
+    margin-right: 8px;
+}
+
 /* >= 768px (Desktop) */
 @media screen and (min-width: 768px) {
 
@@ -53,6 +115,36 @@ p {
         font-size: 22px;
         line-height: 1.36363636;
     }
+
+    /* button */
+    .fill-button {
+        width: 160px;
+        height: 56px;
+        font-size: 18px;
+        line-height: 1.55555556;
+    }
+
+    /* Landing */
+    .landing-content {
+        /* 100vh를 없애고 자식들의 세로 길이의 합(자동) */
+        height: auto;
+        padding: 120px 0;
+    }
+
+    .landing-title {
+        margin-bottom: 32px;
+        font-size: 70px;
+        line-height: 1.02857143;
+    }
+
+    .landing-desc {
+        margin-bottom: 32px;
+    }
+
+    .landing .button-group .fill-button:first-child {
+        margin-right: 16px;
+    }
+
 }
 
 /* Custom Grid System - Fix container width */
