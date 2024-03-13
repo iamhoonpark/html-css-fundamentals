@@ -64,7 +64,6 @@ dd {
     max-width: 810px;
     padding: 8px;
     border-radius: 4px;
-    border: #212021 1px solid;
 }
 
 .message-user {
@@ -94,12 +93,17 @@ dd {
     color: #212021;
 }
 
+.message-sender {
+    margin-right: 8px;
+    font-weight: 900;
+}
+
 .message-timestamp {
     position: relative;
     font-size: 14px;
     line-height: 1.42857143;
     color: #626162;
-    cursor: default;
+    cursor: pointer;
 }
 
 .message-timestamp:hover .tooltip {
@@ -118,4 +122,24 @@ dd {
     white-space: nowrap;
     background-color: #000000;
     transform: translateX(-50%);
+}
+
+.message-timestamp .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 4px solid #000;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    transform: translateX(-50%);
+}
+
+.message-text {
+    font-size: 16px;
+    line-height: 1.25;
+    color: #212021;
 }
