@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Attributes</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            margin-bottom: 50px;
+        }
+
+        /* 
+            속성 선택자
+            - 문법 대괄호 []
+            - 특정 태그에만 적용하고 싶다면 속성 선택자 앞에 해당 태그를 적용
+              ex) div[data-display-name="dream"] {...}
+            - 속성 선택자 전체 적용하고 싶다면 대괄호만 사용
+              ex) [data-display-name="dream"] {...}
+            - 주의사항: data attibutes는 개발자도구-요소 통해 Key와 Value가 모두 노출됨
+              따라서, 사용자에게 노출되어도 되는 정보만 담아야 함
+        */
+        div[data-display-name="dream"] {
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        data attributes
+        - HTML5에 추가 된 html 태그 자체에서 제공하는 속성
+        - 원하는 정보·데이터를 DOM요소(html요소)에 추가할 수 있는 속성
+        - 문법: data-*(원하는값)
+        - 참고자료: https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+     -->
+     <div data-index="1" data-display-name="dream"></div>
+     <div data-index="2" data-display-name="coding"></div>
+     <span data-index="1" data-display-name="dream">하이</span>
+
+     <script>
+        const dream = document.querySelector('div[data-display-name="dream"]');
+        console.log('dream = ', dream);
+
+        // DOMStringMap
+        // - data attritubes으로 설정된 값들이 Map안에 Key와 Value로 저장되어 있음
+        // - 'data-' 를 제외한 변수명 그리고 만약 변수에 대쉬(-)가 선언되어 있다면 camelCase로 Key가 정의 됨
+        console.log('dream.dataset = ', dream.dataset);
+        console.log(dream.dataset.displayName);
+        console.log(dream.dataset.index);
+     </script>
+</body>
+</html>

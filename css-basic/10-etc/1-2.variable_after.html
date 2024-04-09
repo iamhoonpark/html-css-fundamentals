@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom properties</title>
+    <!--  -->
+    <style>
+    /* 
+        1. CSS 에서 변수를 사용하는 이유
+        - 하드코딩(Hard Coded) 방지
+
+        2. 변수를 정의하는 방법
+        - 대쉬 2개 후 변수명 
+        ex) --test: 32px;
+
+        3. 변수를 읽는 방법
+        - css에서 제공하는 함수 var()를 사용
+        ex) font-size: var(--test);
+
+        4. 스코프
+        - 정의한 변수는 컨테이너 안(정의한 곳 안에 모든 자식요소에서 접근 가능)
+        - 형제 노드는 불가능(ex. secont-list)
+        - 그래서, 이를 방지하기 위해 보통 최상위 요소에서 정의
+        ex) :root
+
+        5. calc() 함수
+        - 계산이 필요한 곳에 선언하여 사용할 수 있음
+        ex) calc(var(--test) * 2); == 64px;
+
+        6. 위와 같은 Custom Properties가 가장 잘 활용되는 곳이 미디어쿼리
+
+        ※ 참고자료: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+           지원불가: https://caniuse.com/#search=var
+    */
+      :root {        
+        /* 2.변수 정의하는 방법 */
+        --font-size: 32px;
+        --background-color: thistle;
+        --text-color: whitesmoke;
+        --base-space: 8px;
+      }
+
+      .first-list {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        /* 정의된 값이 없다면 두번째 인자를 통해 기본값을 전달할 수 있음 */
+        margin-left: var(--base-space, 8);
+        font-size: var(--font-size);
+      }
+
+      .second-list {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        margin-left: calc(var(--base-space) * 2); /* calc() 함수는 계산을 도와줌 */
+        font-size: var(--font-size);
+      }
+
+      /* 미디어 쿼리
+      - 모바일 화면
+      - 화면의 크기가 바뀔 때 자동 적용됨 */
+      @media screen and (max-width: 768px) {
+        :root {
+          --font-size: 32px;
+          --background-color: salmon;
+          --text-color: blue;
+          --base-space: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="first-list">
+      <li>Orange</li>
+      <li>Apple</li>
+    </ul>
+    <ul class="second-list">
+      <li>Korea</li>
+      <li>Japan</li>
+      <li>China</li>
+    </ul>
+  </body>
+</html>
